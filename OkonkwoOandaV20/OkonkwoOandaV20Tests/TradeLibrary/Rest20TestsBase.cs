@@ -26,15 +26,16 @@ namespace OkonkwoOandaV20Tests.TradeLibrary
 		 m_Results = new Rest20TestResults();
 	  }
 
-	  #region Default Configuration
+		#region Default Configuration
 
-	  // warning: do not rely on these
-	  // For best results, please create and use your own or your organization's Oanda Practice account
-
-	  private static EEnvironment m_TestEnvironment = EEnvironment.Practice;
-	  private static string m_TestToken = "d845d3f81613358410e3e5298aebdce1-111fcc1d52a6c625c42c05366a22a286";
+		// warning: do not rely on these
+		// For best results, please create and use your own or your organization's Oanda Practice account
+		//101-011-16584871-001
+		//2986b7f0f14edb7a857ecd7f316e1e56-e2ac9c95ce9f2a4b44a71ef824158a76
+		private static EEnvironment m_TestEnvironment = EEnvironment.Practice;
+	  private static string m_TestToken = "2986b7f0f14edb7a857ecd7f316e1e56-e2ac9c95ce9f2a4b44a71ef824158a76";
 	  private static short m_TokenAccounts = 2;
-	  private static string m_TestAccount = "101-001-1913854-002";
+	  private static string m_TestAccount = "101-011-16584871-001";
 
 	  #endregion
 
@@ -42,7 +43,7 @@ namespace OkonkwoOandaV20Tests.TradeLibrary
 
 	  private static bool m_ApiOperationsComplete = false;
 	  private static string m_Currency = "USD";
-	  private static string m_TestInstrument = InstrumentName.Currency.USDCHF;
+	  private static string m_TestInstrument = InstrumentName.Currency.EURUSD;
 	  private static List<Instrument> m_OandaInstruments;
 	  private static List<Price> m_OandaPrices;
 	  private static long m_FirstTransactionID;
@@ -336,7 +337,7 @@ namespace OkonkwoOandaV20Tests.TradeLibrary
 		 string price = string.Concat(CandleStickPriceType.Midpoint, CandleStickPriceType.Bid, CandleStickPriceType.Ask);
 
 		 string instrument = m_TestInstrument;
-		 string granularity = CandleStickGranularity.Hours01;
+			string granularity = CandleStickGranularity.Hours01;
 
 		 var parameters = new InstrumentCandlesParameters()
 		 {

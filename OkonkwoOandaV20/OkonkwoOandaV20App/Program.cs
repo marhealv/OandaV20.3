@@ -11,7 +11,9 @@ using static OkonkwoOandaV20.TradeLibrary.REST.Rest20;
 
 namespace OkonkwoOandaV20App
 {
-   class Program
+	//101-011-16584871-001
+	//2986b7f0f14edb7a857ecd7f316e1e56-e2ac9c95ce9f2a4b44a71ef824158a76
+	class Program
    {
 	  static void Main(string[] args)
 	  {
@@ -35,9 +37,9 @@ namespace OkonkwoOandaV20App
 	  {
 		 WriteNewLine("Setting your V20 credentials ...");
 
-		 AccountID = "101-001-1913854-002";
+		 AccountID = "101-011-16584871-001";
 		 var environment = EEnvironment.Practice;
-		 var token = "d74f1d18196cdf2dd8f1cb443743effa-93ce3fd1b9820eaac5b93784ec044b85";
+		 var token = "2986b7f0f14edb7a857ecd7f316e1e56-e2ac9c95ce9f2a4b44a71ef824158a76";
 
 		 Credentials.SetCredentials(environment, token, AccountID);
 

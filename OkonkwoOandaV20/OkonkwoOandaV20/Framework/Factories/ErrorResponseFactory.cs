@@ -20,8 +20,8 @@ namespace OkonkwoOandaV20.Framework.Factories
 	  {
 		 // the 'type' property is injected by the Rest20.GetWebResponse catch block
 		 var dynamicError = JsonConvert.DeserializeObject<dynamic>(json);
-		 var errorType = dynamicError.type.ToString();
-
+		 dynamic errorType = dynamicError.type.ToString();
+			
 		 var errorResponseType = _errorResponseTypes.FirstOrDefault(type => type.Name == errorType);
 
 		 var errorResponse = JsonConvert.DeserializeObject(json, errorResponseType ?? typeof(ErrorResponse));
